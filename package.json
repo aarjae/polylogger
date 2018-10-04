@@ -4,7 +4,7 @@
   "description": "A logging system for Polymorph projects using telegram",
   "main": "index.js",
   "author": "Raaj Ahiable <Polymorph Labs>",
-  "license": "Restricted",
+  "license": "MIT",
   "dependencies": {
     "line-by-line": "^0.1.6",
     "telebot": "^1.2.6"
