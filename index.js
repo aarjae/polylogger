@@ -74,3 +74,4 @@ const init = function (options) {
 };
 
 
+module.exports = init;
