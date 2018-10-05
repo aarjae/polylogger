@@ -1,12 +1,8 @@
 const fs = require('fs');
 const LineByLineReader = require('line-by-line');
 
-
-// Calculating path to contacts file
-const contactFilePath = __dirname.replace('/_utils', '/contacts.txt');
-
 const addUserToContactList = function (contact, cb) {
-    fs.appendFile(contactFilePath, `${contact}\n`, (err) => {
+    fs.appendFile('contacts.txt', `${contact}\n`, (err) => {
         if(err){
             cb(err);
         }
@@ -16,16 +12,21 @@ const addUserToContactList = function (contact, cb) {
 };
 
 
-const sendMessageToContacts = function(sendFunction, cb){
-    const lr = new LineByLineReader(contactFilePath);
+const sendMessageToContacts = function(sendFunction){
+    // Checking to see if contacts file exists
+    fs.stat('contacts.txt', stats => {
+        if(!stats) return;
 
-    lr.on('line', function (userContact) {
-       sendFunction(userContact);
-    });
+        const lr = new LineByLineReader('contacts.txt');
 
-    lr.on('error', function (err) {
-        throw new Error(err);
-    });
+        lr.on('line', function (userContact) {
+            sendFunction(userContact);
+        });
+
+        lr.on('error', function (err) {
+            throw new Error(err);
+        });
+    })
 };
 
 module.exports.addUserToContactList = addUserToContactList;
