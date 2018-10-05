@@ -1,7 +1,7 @@
 {
-  "name": "telelogger",
+  "name": "polylogger",
   "version": "1.0.0",
-  "description": "A logging system for Polymorph projects using telegram",
+  "description": "A logging system for telegram",
   "main": "index.js",
   "author": "Raaj Ahiable <Polymorph Labs>",
   "license": "MIT",
