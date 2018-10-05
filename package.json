@@ -2,6 +2,7 @@
   "name": "polylogger",
   "version": "1.0.1",
   "description": "A logging system for telegram",
+  "repository": "https://github.com/aarjae/polylogger",
   "main": "index.js",
   "author": "Raaj Ahiable <Polymorph Labs>",
   "license": "MIT",
