@@ -11,10 +11,18 @@ the telegram bot token provided
 - NPM
 
 ### Installing
+Install from npm
+```$xslt
+npm i --save polylogger
+```
 
+or clone from this repo
+```$xslt
 git clone https://github.com/mullwar/telebot.git
 cd polylogger
 npm install
+```
+
 
 
 ## Usage
@@ -44,7 +52,7 @@ polylogger when initializing
 
 ## Built With
 
-* [Telebot](https://github.com/mullwar/telebot) - The web framework used
+* [Telebot](https://github.com/mullwar/telebot) - Telegram bot library
 
 
 ## Contributions
