@@ -17,7 +17,7 @@ const addUserToContactList = function (contact, cb) {
 
 
 const sendMessageToContacts = function(sendFunction, cb){
-    const lr = new LineByLineReader('contacts.txt');
+    const lr = new LineByLineReader(contactFilePath);
 
     lr.on('line', function (userContact) {
        sendFunction(userContact);
