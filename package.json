@@ -1,6 +1,6 @@
 {
   "name": "polylogger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A logging system for telegram",
   "main": "index.js",
   "author": "Raaj Ahiable <Polymorph Labs>",
