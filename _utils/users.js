@@ -14,8 +14,8 @@ const addUserToContactList = function (contact, cb) {
 
 const sendMessageToContacts = function(sendFunction){
     // Checking to see if contacts file exists
-    fs.stat('contacts.txt', stats => {
-        if(!stats.isFile()) return;
+    fs.stat('contacts.txt', (err, stats) => {
+        if(err || !stats.isFile()) return;
 
         const lr = new LineByLineReader('contacts.txt');
 
