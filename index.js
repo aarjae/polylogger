@@ -3,8 +3,6 @@ const { parsePassword, comparePassword, addUserToContactList, sendMessageToConta
 
 
 const init = function (options) {
-    console.info('Connecting to telegram bot...');
-
     const connection = connectTelegram(options.botToken);
 
     connection.start();
@@ -18,8 +16,6 @@ const init = function (options) {
 
         // Authentication flow
         connection.on(['/auth'], msg => {
-            console.log(msg);
-
             // Checking to see if user added password. Using the length of text to find out.
             if(msg.text.length <= '/auth'.length){
                 msg.reply.text('Send /auth command with password. Eg /auth 63728193546');
