@@ -1,6 +1,6 @@
 {
   "name": "polylogger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A logging system for telegram",
   "repository": "https://github.com/aarjae/polylogger",
   "main": "index.js",
